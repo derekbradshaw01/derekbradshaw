@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+
+# Allow all search engines to access the site
+User-agent: *
+Disallow: /node_modules/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://derekbradshaw.com/sitemap.xml
