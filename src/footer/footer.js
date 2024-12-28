@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-section site-info">
           <h3>derekbradshaw.com</h3>
-          <p>Email: <a href="mailto:derek@example.com">derek@example.com</a></p>
+          <p>Email: <a href="mailto:derek@example.com">derekbradshaw02@gmail.com</a></p>
           <p>Phone: <a href="tel:+17323377098">+1 (732) 337-7098</a></p>
         </div>
         <div className="footer-section social-links">
