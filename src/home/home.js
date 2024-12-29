@@ -41,13 +41,13 @@ const Home = () => {
       </section>
 
       {/* Call-to-Action */}
-      {/*}
+      
       <section className="cta">
         <h2>Let’s Connect</h2>
         <p>Have a question or want to collaborate? Get in touch!</p>
         <button onClick={() => window.location.href = "/contact"}>Contact Me</button>
       </section>
-      */}
+      
     </div>
   );
 };

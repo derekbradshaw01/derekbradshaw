@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 import "./contact.css"; // Import the CSS file
 
 const Contact = () => {
@@ -34,9 +35,23 @@ const Contact = () => {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      setIsSubmitted(true);
-      console.log("Form submitted successfully:", formData);
       // Add further actions here, like sending data to a server
+      var templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message
+      };
+      emailjs.send('service_9b5e3xn', 'template_dixfyva', templateParams, {publicKey: 'EWo6T35VpPJ2NFE8b'}).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setIsSubmitted(true);
+          console.log("Form submitted successfully:", formData);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
+        
     }
   };
 
@@ -85,6 +100,7 @@ const Contact = () => {
           </button>
         </form>
       )}
+      
     </div>
   );
 };

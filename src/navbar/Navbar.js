@@ -33,9 +33,9 @@ const Navbar = () => {
         </div>
       </li> */}
       
-      {/*<li>
+      <li>
         <a href="/contact">Contact</a>
-      </li>*/}
+      </li>
     </ul>
   </div>
   <div className="navbar-right">
